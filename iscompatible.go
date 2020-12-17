@@ -30,7 +30,7 @@ func (f *Filter) IsCompatible(f2 *Filter) bool {
 	f.lock.RLock()
 	defer f.lock.RUnlock()
 
-	f.lock.RLock()
+	f2.lock.RLock()
 	defer f2.lock.RUnlock()
 
 	// 0 is true, non-0 is false
